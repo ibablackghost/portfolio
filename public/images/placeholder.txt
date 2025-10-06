@@ -1,0 +1,9 @@
+Placez votre photo de profil ici et renommez-la "profile-photo.jpg"
+
+Instructions :
+1. Ajoutez votre photo dans ce dossier
+2. Renommez-la "profile-photo.jpg"
+3. Supprimez ce fichier placeholder.txt
+
+Formats supportés : JPG, PNG, WebP
+Taille recommandée : 400x400 pixels minimum

@@ -143,7 +143,20 @@ const Hero: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="image-placeholder">
+                <img 
+                  src="/images/profile-photo.jpg" 
+                  alt="Papa Ibrahima Diagne"
+                  className="profile-photo"
+                  onError={(e) => {
+                    // Fallback si l'image n'existe pas
+                    e.currentTarget.style.display = 'none';
+                    const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                    if (nextElement) {
+                      nextElement.style.display = 'flex';
+                    }
+                  }}
+                />
+                <div className="image-placeholder" style={{ display: 'none' }}>
                   <span>👨‍💻</span>
                 </div>
               </motion.div>

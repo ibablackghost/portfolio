@@ -73,7 +73,7 @@ const About: React.FC = () => {
               <p>
                 Développeur passionné basé à Dakar, je me spécialise dans la création 
                 d'applications web modernes et performantes. Mon expertise couvre 
-                l'ensemble du stack technologique, du frontend au backend.
+                l'ensemble du stack technologique, du frontend au backendddd.
               </p>
               <p>
                 J'aime transformer des idées complexes en solutions élégantes et intuitives. 
