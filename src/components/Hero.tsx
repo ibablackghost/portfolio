@@ -1,14 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Download, Github, Linkedin } from 'lucide-react';
+import LazyImage from './LazyImage';
+import { useReducedMotion, useLowEndDevice } from '../hooks/usePerformance';
 import './Hero.css';
 
 const Hero: React.FC = () => {
+  const prefersReducedMotion = useReducedMotion();
+  const isLowEndDevice = useLowEndDevice();
+
+  // Réduire les animations sur les appareils bas de gamme ou si l'utilisateur préfère moins d'animation
+  const shouldReduceAnimations = prefersReducedMotion || isLowEndDevice;
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
+      transition: shouldReduceAnimations ? { duration: 0.3 } : {
         staggerChildren: 0.3,
         delayChildren: 0.2
       }
@@ -16,18 +24,18 @@ const Hero: React.FC = () => {
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: shouldReduceAnimations ? 0 : 30, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
+      transition: shouldReduceAnimations ? { duration: 0.3 } : {
         duration: 0.8,
         ease: [0.6, -0.05, 0.01, 0.99]
       }
     }
   };
 
-  const floatingVariants = {
+  const floatingVariants = shouldReduceAnimations ? {} : {
     animate: {
       y: [-10, 10, -10],
       transition: {
@@ -44,18 +52,18 @@ const Hero: React.FC = () => {
         <div className="hero-shapes">
           <motion.div 
             className="shape shape-1"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            animate={shouldReduceAnimations ? {} : { rotate: 360 }}
+            transition={shouldReduceAnimations ? {} : { duration: 20, repeat: Infinity, ease: "linear" }}
           />
           <motion.div 
             className="shape shape-2"
-            animate={{ rotate: -360 }}
-            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+            animate={shouldReduceAnimations ? {} : { rotate: -360 }}
+            transition={shouldReduceAnimations ? {} : { duration: 25, repeat: Infinity, ease: "linear" }}
           />
           <motion.div 
             className="shape shape-3"
             variants={floatingVariants}
-            animate="animate"
+            animate={shouldReduceAnimations ? undefined : "animate"}
           />
         </div>
       </div>
@@ -143,22 +151,12 @@ const Hero: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <img 
-                  src="/images/profile-photo.jpg" 
+                <LazyImage
+                  src="/images/profile-photo.jpg"
                   alt="Papa Ibrahima Diagne"
-                  className="profile-photo"
-                  onError={(e) => {
-                    // Fallback si l'image n'existe pas
-                    e.currentTarget.style.display = 'none';
-                    const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
-                    if (nextElement) {
-                      nextElement.style.display = 'flex';
-                    }
-                  }}
+                  className="profile-photo-container"
+                  placeholder="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjZjBlZmVmIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMjEwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSI4MCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+8J+RqOKAjeKArfCfkrs8L3RleHQ+Cjwvc3ZnPgo="
                 />
-                <div className="image-placeholder" style={{ display: 'none' }}>
-                  <span>👨‍💻</span>
-                </div>
               </motion.div>
               <motion.div 
                 className="floating-elements"

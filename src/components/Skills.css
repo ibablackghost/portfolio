@@ -214,45 +214,109 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .skills-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 60px 0;
+  }
+  
+  .skills-header {
+    margin-bottom: 2rem;
+  }
+  
+  .skills-grid {
     gap: 1.5rem;
   }
   
   .skill-category {
     padding: 1.5rem;
+    margin: 0 1rem;
   }
   
-  .technologies-grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 1rem;
-  }
-  
-  .tech-item {
-    padding: 1rem 0.5rem;
-  }
-  
-  .tech-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-  
-  .tech-name {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
   .category-header {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
   }
   
   .category-title {
     font-size: 1.3rem;
+  }
+  
+  .technologies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+  }
+  
+  .tech-item {
+    padding: 0.8rem 0.3rem;
+  }
+  
+  .tech-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
+  }
+  
+  .tech-name {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .skill-category {
+    margin: 0 0.5rem;
+    padding: 1.2rem;
+  }
+  
+  .category-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .category-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .category-title {
+    font-size: 1.2rem;
+  }
+  
+  .technologies-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .tech-item {
+    padding: 0.6rem 0.2rem;
+  }
+  
+  .tech-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  
+  .tech-name {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .skill-category {
+    padding: 1rem;
   }
   
   .technologies-grid {

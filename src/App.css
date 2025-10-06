@@ -106,3 +106,84 @@ body {
     font-size: 2rem;
   }
 }
+
+/* Styles pour le loading spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  padding: 2rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(102, 126, 234, 0.1);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Optimisations performance */
+* {
+  will-change: auto;
+}
+
+.fade-in-up {
+  will-change: transform, opacity;
+}
+
+.float {
+  will-change: transform;
+}
+
+/* Styles pour LazyImage */
+.lazy-image-container {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+}
+
+.lazy-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.lazy-image.loading {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+.image-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+}
+
+.image-loading .loading-spinner {
+  min-height: auto;
+  padding: 0;
+}
+
+.image-loading .spinner {
+  width: 30px;
+  height: 30px;
+  border-width: 3px;
+}
