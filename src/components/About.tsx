@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Palette, Zap, Heart } from 'lucide-react';
 import './About.css';
+import { BsWordpress } from 'react-icons/bs';
+import { FaUniversity } from 'react-icons/fa';
 
 const About: React.FC = () => {
   const containerVariants = {
@@ -38,7 +40,7 @@ const About: React.FC = () => {
     {
       icon: <Code size={40} />,
       title: 'Développement Full-Stack',
-      description: 'Expert en React, Node.js, et bases de données modernes'
+      description: 'Expert en React, Angular, Node.js, et bases de données modernes'
     },
     {
       icon: <Palette size={40} />,
@@ -54,7 +56,18 @@ const About: React.FC = () => {
       icon: <Heart size={40} />,
       title: 'Passion',
       description: 'Amour du code et de l\'innovation technologique'
-    }
+    },
+    {
+      icon: <BsWordpress size={40} />,
+      title: 'WordPress',
+      description: 'Création et gestion de sites WordPress sur mesure'
+    },
+    {
+      icon: <FaUniversity size={40} />,
+      title: 'FinTech',
+      description: 'Solutions innovantes pour la finance digitale et les paiements'
+    },
+
   ];
 
   return (
@@ -71,23 +84,23 @@ const About: React.FC = () => {
             <h2 className="section-title">À propos de moi</h2>
             <div className="about-description">
               <p>
-                Développeur passionné basé à Dakar, je me spécialise dans la création 
-                d'applications web modernes et performantes. Mon expertise couvre 
-                l'ensemble du stack technologique, du frontend au backendddd.
+                Développeur passionné basé à Dakar, je me spécialise dans la création
+                d'applications web modernes et performantes. Mon expertise couvre
+                l'ensemble du stack technologique, du frontend au backend.
               </p>
               <p>
-                J'aime transformer des idées complexes en solutions élégantes et intuitives. 
-                Mon approche se base sur l'écoute, la collaboration et l'innovation pour 
+                J'aime transformer des idées complexes en solutions élégantes et intuitives.
+                Mon approche se base sur l'écoute, la collaboration et l'innovation pour
                 créer des expériences digitales exceptionnelles au Sénégal et en Afrique.
               </p>
             </div>
 
-            <motion.div 
+            <motion.div
               className="stats-grid"
               variants={itemVariants}
             >
               {stats.map((stat, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="stat-item"
                   whileHover={{ scale: 1.05, y: -5 }}
@@ -100,7 +113,7 @@ const About: React.FC = () => {
             </motion.div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="about-features"
             variants={itemVariants}
           >
@@ -109,8 +122,8 @@ const About: React.FC = () => {
                 <motion.div
                   key={index}
                   className="feature-card"
-                  whileHover={{ 
-                    scale: 1.05, 
+                  whileHover={{
+                    scale: 1.05,
                     y: -10,
                     transition: { duration: 0.3 }
                   }}

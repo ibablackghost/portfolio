@@ -25,7 +25,7 @@ const Projects: React.FC = () => {
       id: 1,
       title: 'E-commerce Moderne',
       description: 'Plateforme e-commerce complète avec React, Node.js et MongoDB. Interface moderne et intuitive.',
-      image: '/api/placeholder/600/400',
+      image: '/ecommerce.jpg',
       category: 'web',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       features: ['Panier intelligent', 'Paiement sécurisé', 'Gestion admin', 'API REST'],
@@ -85,7 +85,7 @@ const Projects: React.FC = () => {
       id: 6,
       title: 'App de Météo',
       description: 'Application météo avec géolocalisation et prévisions détaillées.',
-      image: '/api/placeholder/600/400',
+      image: '/meteo.jpg',
       category: 'mobile',
       technologies: ['Flutter', 'API REST', 'SQLite', 'Maps'],
       features: ['Géolocalisation', 'Prévisions', 'Notifications', 'Offline'],
@@ -173,9 +173,11 @@ const Projects: React.FC = () => {
                     transition={{ duration: 0.5 }}
                   >
                     <div className="featured-image">
-                      <div className="image-placeholder">
-                        <span>🚀</span>
-                      </div>
+                      <img 
+                        src={featuredProjects[currentProject]?.image} 
+                        alt={featuredProjects[currentProject]?.title}
+                        className="project-img"
+                      />
                     </div>
                     <div className="featured-content">
                       <h4 className="featured-project-title">
@@ -255,9 +257,11 @@ const Projects: React.FC = () => {
                   whileHover={{ y: -10, scale: 1.02 }}
                 >
                   <div className="project-image">
-                    <div className="image-placeholder">
-                      <span>💻</span>
-                    </div>
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="project-img"
+                    />
                     <div className="project-overlay">
                       <motion.a
                         href={project.liveUrl}

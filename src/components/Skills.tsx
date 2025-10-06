@@ -40,10 +40,9 @@ const Skills: React.FC = () => {
       icon: <Code size={30} />,
       color: '#667eea',
       skills: [
-        { name: 'React', level: 95 },
+        { name: 'React', level: 60 },
         { name: 'TypeScript', level: 90 },
-        { name: 'Next.js', level: 85 },
-        { name: 'Vue.js', level: 80 },
+        { name: 'Angular', level: 85 },
         { name: 'HTML/CSS', level: 95 },
         { name: 'Tailwind CSS', level: 90 }
       ]
@@ -53,12 +52,12 @@ const Skills: React.FC = () => {
       icon: <Database size={30} />,
       color: '#764ba2',
       skills: [
-        { name: 'Node.js', level: 90 },
-        { name: 'Express', level: 85 },
-        { name: 'MongoDB', level: 80 },
+        { name: 'MySQL', level: 80 },
+        { name: 'Django', level: 75 },
+        { name: 'MongoDB', level: 60 },
         { name: 'PostgreSQL', level: 75 },
-        { name: 'GraphQL', level: 70 },
-        { name: 'REST API', level: 90 }
+        { name: 'GraphQL', level: 50 },
+        { name: 'REST API', level: 60 }
       ]
     },
     {
@@ -67,10 +66,10 @@ const Skills: React.FC = () => {
       color: '#f093fb',
       skills: [
         { name: 'Figma', level: 85 },
-        { name: 'Adobe XD', level: 80 },
-        { name: 'Photoshop', level: 75 },
-        { name: 'Illustrator', level: 70 },
-        { name: 'UI/UX Design', level: 85 },
+        { name: 'Adobe XD', level: 60 },
+        { name: 'Photoshop', level: 65 },
+        { name: 'Illustrator', level: 50 },
+        { name: 'UI/UX Design', level: 65 },
         { name: 'Prototyping', level: 80 }
       ]
     },
@@ -79,12 +78,12 @@ const Skills: React.FC = () => {
       icon: <Smartphone size={30} />,
       color: '#f5576c',
       skills: [
-        { name: 'React Native', level: 80 },
-        { name: 'Flutter', level: 70 },
-        { name: 'iOS Development', level: 65 },
-        { name: 'Android Development', level: 70 },
-        { name: 'PWA', level: 85 },
-        { name: 'Responsive Design', level: 95 }
+        { name: 'React Native', level: 60 },
+        { name: 'Flutter', level: 58 },
+        { name: 'iOS Development', level: 50 },
+        { name: 'Android Development', level: 63 },
+        { name: 'PWA', level: 80 },
+        { name: 'Responsive Design', level: 75 }
       ]
     },
     {
@@ -93,10 +92,10 @@ const Skills: React.FC = () => {
       color: '#4facfe',
       skills: [
         { name: 'Docker', level: 80 },
-        { name: 'AWS', level: 75 },
-        { name: 'Vercel', level: 85 },
-        { name: 'Netlify', level: 80 },
-        { name: 'CI/CD', level: 75 },
+        { name: 'AWS', level: 60 },
+        { name: 'Vercel', level: 65 },
+        { name: 'Netlify', level: 50 },
+        { name: 'CI/CD', level: 70 },
         { name: 'Linux', level: 70 }
       ]
     },
@@ -107,10 +106,10 @@ const Skills: React.FC = () => {
       skills: [
         { name: 'Git', level: 90 },
         { name: 'VS Code', level: 95 },
-        { name: 'Webpack', level: 80 },
-        { name: 'Vite', level: 85 },
-        { name: 'Jest', level: 75 },
-        { name: 'ESLint', level: 80 }
+        { name: 'cursor', level: 80 },
+        { name: 'excel', level: 85 }
+
+      
       ]
     }
   ];
@@ -123,7 +122,9 @@ const Skills: React.FC = () => {
     { name: 'AWS', icon: '☁️', color: '#ff9900' },
     { name: 'Docker', icon: '🐳', color: '#2496ed' },
     { name: 'Git', icon: '📦', color: '#f05032' },
-    { name: 'Figma', icon: '🎨', color: '#f24e1e' }
+    { name: 'Figma', icon: '🎨', color: '#f24e1e' },
+    { name: 'WordPress', icon: '🌐', color: '#ffffffff' }
+
   ];
 
   return (
