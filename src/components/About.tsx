@@ -13,7 +13,7 @@ const About: React.FC = () => {
         delayChildren: 0.3
       }
     }
-  };
+  } as any;
 
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
@@ -22,10 +22,10 @@ const About: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: [0.6, -0.05, 0.01, 0.99]
+        ease: "easeOut"
       }
     }
-  };
+  } as any;
 
   const stats = [
     { number: '25+', label: 'Projets réalisés' },
