@@ -37,7 +37,7 @@ const Projects: React.FC = () => {
       id: 2,
       title: 'Application Mobile Fitness',
       description: 'App mobile de suivi fitness avec React Native. Suivi des exercices et nutrition.',
-      image: '/api/placeholder/600/400',
+      image: '/fitness.jpg',
       category: 'mobile',
       technologies: ['React Native', 'Firebase', 'Redux', 'Expo'],
       features: ['Tracking exercices', 'Plan nutritionnel', 'Statistiques', 'Social'],
