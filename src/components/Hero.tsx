@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
               </motion.a>
               
               <motion.a
-                href="/cv.pdf"
+                href="/CV_Papa_ibrahima_DIAGNE.pdf"
                 className="btn btn-secondary"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -121,7 +121,7 @@ const Hero: React.FC = () => {
               variants={itemVariants}
             >
               <motion.a
-                href="https://github.com"
+                href="https://github.com/ibablackghost"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, rotate: 5 }}
@@ -130,7 +130,7 @@ const Hero: React.FC = () => {
                 <Github size={24} />
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/papa-ibrahima-diagne-3b48a422a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, rotate: 5 }}

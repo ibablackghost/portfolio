@@ -51,14 +51,14 @@ const Contact: React.FC = () => {
     {
       icon: <Mail size={24} />,
       title: 'Email',
-      value: 'papa.ibrahima.diagne@example.com',
-      link: 'mailto:papa.ibrahima.diagne@example.com'
+      value: 'papaibrahimadiagne2001@gmail.com',
+      link: 'mailto:papaibrahimadiagne2001@gmail.com'
     },
     {
       icon: <Phone size={24} />,
       title: 'Téléphone',
-      value: '+221 77 123 45 67',
-      link: 'tel:+221771234567'
+      value: '+221 77 727 66 57',
+      link: 'tel:+221777276657'
     },
     {
       icon: <MapPin size={24} />,
@@ -72,13 +72,13 @@ const Contact: React.FC = () => {
     {
       icon: <Github size={24} />,
       name: 'GitHub',
-      url: 'https://github.com',
+      url: 'https://github.com/ibablackghost',
       color: '#333'
     },
     {
       icon: <Linkedin size={24} />,
       name: 'LinkedIn',
-      url: 'https://linkedin.com',
+      url: 'https://www.linkedin.com/in/papa-ibrahima-diagne-3b48a422a/',
       color: '#0077b5'
     },
     {
